@@ -8,7 +8,10 @@ public class Boletin19_3 {
         Programacion dam = new Programacion();
         int[] notas = new int[30];
 
-        int opcion = Integer.parseInt(JOptionPane.showInputDialog(""
+        int opcion;
+
+      do{
+        opcion = Integer.parseInt(JOptionPane.showInputDialog(""
                 + "**********MENÚ**********\n"
                 + "Introduce una opción:\n"
                 + "1.- Ver número de suspensos y aprobados\n"
@@ -18,7 +21,7 @@ public class Boletin19_3 {
                 + "5.- Ver los alumnos aprobados\n"
                 + "6.- Mostrar lista ordenada de notas\n"
                 + "7.- Buscar la nota de un alumno"));
-
+        
         switch (opcion) {
             //opcion 1 - mostrar numero suspensos y aprobados            
             case 1:
@@ -53,5 +56,7 @@ public class Boletin19_3 {
                 dam.generarNotasAlumnos();
                 dam.buscarNombreAlumno();
         }
+      } while(opcion !=0);
+
     }
 }
